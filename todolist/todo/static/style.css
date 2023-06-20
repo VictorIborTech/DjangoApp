@@ -1,0 +1,481 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background: #35424a;
+    overflow-x: hidden;
+
+}
+
+.home{
+    display: flex;
+    justify-content: space-around;
+    background-color:#35424a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.home-text{
+    padding: 150px;
+
+}
+
+.home-img{
+
+    width: 40vw;
+    height: 70vh;
+    padding: 90px;
+    box-shadow: 0 0px 20px rgba(0,0,0,6);
+
+}
+
+.text{
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    color:white;
+    font-size:45px;
+    font-weight:bold;
+    padding: 6px;
+}
+.sub-text{
+    color:white;
+    padding:8px;
+    font-size: 19px;
+    font-style:italic;
+}
+
+.todo-btn{
+    padding: 8px 12px;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    color: white;
+    border-color:white;
+    outline:none;
+    cursor:pointer;
+    text-decoration:none
+}
+.home-link{
+    color:white;
+    text-decoration:none;
+}
+
+.footer{
+    background-color:gray;
+    margin-top: 450px;
+    padding: 10px 60px;
+    text-align: center;
+}
+header{
+    background-color: gray;
+    padding: 15px,0px;
+    min-height: 90px;
+
+}
+.session-nav{
+    float:right;
+    margin-top: 4px;
+}
+.join-btn{
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    margin-right:18px;
+    text-decoration:none;
+    border:2px solid blue;
+    border-radius: 7px;
+    color:white;
+    padding:6px 15px;
+
+}
+.login-btn{
+    background-color:#375BDC;
+    color:white;
+    border: 2px solid blue;
+    border-radius:5px;
+    font-size:18px;
+    padding: 4px;
+    width:100px;
+    margin-top:26px;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+.user-tag{
+    margin-right:3px;
+    text-decoration:none;
+    color:white;
+    padding:6px 15px;
+    font-size:22px;
+    font-weight:bolder;
+}
+.user-tag:hover{
+    background-color: #35424a;
+    font-weight: lighter;
+    border-radius: 10px;
+    transition: 40ms;
+}
+.profile-img{
+    border-radius:360%;
+    display:block;
+	margin:0 auto;
+	max-width:250px;
+}
+.myprofile-form{
+    background-color: gray;
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred );
+    background-size: 100% 120px;
+    background-repeat: no-repeat;
+    align-items:center;
+    color: white;
+    font-size:20px;
+    justify-content:space-around;
+    display: grid;
+    margin: 39px 15%;
+    border-radius: 8px;
+    box-shadow:0 0px 30px rgba(0,0,10,10);
+    padding: 20px 120px;
+
+}
+.update-form{
+    margin: 20px;
+}
+.name{
+    text-align:center;
+
+
+}
+
+#address-info{
+    margin-bottom:22px;
+}
+.file-input{
+    padding: 7px;
+    margin: 10px 0;
+    color: white;
+
+}
+.input{
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #35424a;
+    border: 2px solid green;
+    color: white;
+    display:block;
+}
+
+
+.session-btn{
+    border:1px solid blue;
+    text-decoration:none;
+    border-radius: 7px;
+    color:white;
+    padding:6px 18px;
+}
+nav ul{
+    padding: 16px 0px;
+    margin: 0px;
+
+}
+nav li{
+    float: left;
+    display: inline;
+    padding-inline: 17px;
+
+}
+nav li:hover{
+    background-color: #35424a;
+    font-weight: lighter;
+    border-radius: 10px;
+    transition: 40ms;
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 25px;
+
+
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.task{
+    justify-content:center;
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    margin: 60px 10%;
+    border-radius: 5px;
+    box-shadow:0 0px 20px rgba(0,0,0,6);
+    padding: 12px;
+
+}
+.list-style{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+.task-header{
+    text-align:center;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 35px;
+
+}
+
+.task-items{
+    display: flex;
+    border-bottom: 3px solid gray;
+    margin-right: 5em;
+    margin-left: 5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 25px;
+    font-size: 20px;
+    justify-content:space-between;
+
+}
+.task-links{
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.task-links:hover{
+    background-color: gray;
+    font-weight: lighter;
+    border-radius: 30px;
+    transition: 40ms;
+    font-size: 25px;
+    color: white;
+    cursor:pointer;
+}
+
+.taskinfo{
+    font-size:20px;
+    text-align:center;
+    padding-top: 20px;
+}
+
+
+.mycard{
+    background-color: gray;
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    background-size: 100% 45px;
+    background-repeat: no-repeat;
+    align-items:center;
+    margin: 80px 30%;
+    border-radius: 5px;
+    box-shadow:0 0px 20px rgba(0,0,0,6);
+    padding: 12px;
+
+
+}
+
+.details-title{
+    text-align:center;
+    font-size: 26px;
+}
+
+article p{
+    font-size: 20px;
+    padding: 20px;
+}
+.badge {
+  padding: 0.25rem 1rem;
+  color: var(--color-white);
+  border-radius: 2rem;
+  align-self: flex-start;
+  font-size: 14px;
+}
+
+.badge-completed {
+  background-color: green;
+}
+
+.badge-pending {
+  background-color: #35424a;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.completed:hover {
+  text-decoration: line-through;
+}
+
+
+.task-update{
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+
+}
+
+.task-delete{
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+
+}
+.deletecard{
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred);
+    background-size: 100% 45px;
+    background-repeat: no-repeat;
+    align-items:center;
+    margin: 80px 30%;
+    border-radius: 5px;
+    box-shadow:0 0px 20px rgba(0,0,0,6);
+    padding: 20px;
+
+}
+.deleteinfo{
+    font-size: 20px;
+    padding: 20px;
+}
+
+#delete{
+    padding-right:25px;
+}
+
+.alert {
+  padding: 1rem 9rem;
+  border-radius: 0.5rem;
+  font-size:21px
+}
+.alert-error {
+  background-color: red;
+  color: var(--color-light);
+}
+
+.alert-warning {
+  background-color: yellow;
+  color: var(--color-light);
+}
+
+.alert-info {
+  background-color: blue;
+  color: var(--color-light);
+}
+
+.alert-success {
+  background-color: green;
+  color: white;
+}
+
+.errormessage{
+    color:red
+}
+.linkinfo{
+    padding-top: 15px;
+}
+.link{
+    color:blue;
+    text-decoration:none;
+
+}
+.myform{
+    background-color: gray;
+    background-image: linear-gradient(to bottom, #375BDC, palevioletred );
+    background-size: 100% 90px;
+    background-repeat: no-repeat;
+    align-items:center;
+    color: white;
+    font-size:20px;
+    justify-content:space-around;
+    display: grid;
+    margin: 40px 35%;
+    border-radius: 8px;
+    box-shadow:0 0px 30px rgba(0,0,10,10);
+    padding: 20px;
+
+}
+
+.myform h2{
+    color: #ffffff;
+    margin: 20px 0 20px 0;
+    padding-bottom: 20px;
+    font-size: 28px;
+
+}
+label{
+    font-size:20px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password']{
+   border-radius: 5px;
+  border: solid 1px green;
+  width: 80%;
+  padding: 0.25rem 0.75rem;
+  margin-top:5px;
+}
+textarea {
+  border-radius: 5px;
+  padding: 1rem 1rem;
+}
+
+textarea {
+  max-height: 7rem;
+}
+
+.cancel{
+    float:right;
+    padding:4px 4px;
+    background-color:#375BDC;
+    color:white;
+    font-size:18px;
+    margin-top:26px;
+    text-decoration: none;
+
+}
+
+.btn{
+    background-color:#375BDC;
+    color:white;
+    border: none;
+    font-size:18px;
+    padding: 4px;
+    margin-top:26px;
+    cursor:pointer;
+
+}
+
+
+#home-icon{
+    padding-right: 7px;
+
+}
+
+#task-icon{
+    padding-right: 7px;
+
+}
+
+#create-icon{
+    padding-right: 7px;
+
+}
+
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.email-link{
+    color:white;
+    text-decoration:none;
+}

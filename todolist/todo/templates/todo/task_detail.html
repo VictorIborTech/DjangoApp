@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<article class="mycard">
+    <h2 class="details-title">{{ task.title }}</h2>
+    <span class="badge {% if task.completed%}badge-completed{% else %}badge-pending{% endif %}">
+        {% if task.completed%}
+            Completed
+        {% else %}
+            Pending
+        {% endif %}
+    </span>
+    <p>{{ task.description }}</p>
+
+</article>
+
+
+{% endblock content%}

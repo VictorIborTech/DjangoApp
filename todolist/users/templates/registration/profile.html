@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="center">
+    <form method="POST" class="myprofile-form" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% if user.profile %}
+            <img src="{{ user.profile.avatar.url}}" alt="{{ user.username }}" class="profile-img"></img>
+        {% endif %}
+
+        <h2 class="name" > {{ user.username | title }}</h2>
+        <p class="name">Email: <a href="mailto:{{user.email}}" class="email-link">{{ user.email }}</a></p>
+
+        <p class="name" id="address-info">Address: <strong>{{user.profile.address}}</strong></p>
+<!--        <p>Date Of Birth: <strong>{{user.profile.date_of_birth}}</strong></p>-->
+         <h2 ></h2>
+        <hr>
+
+       <div class="update-form">
+        <label class="update-form" for="username">Username</label>
+        <input class="input" type="text" name="username"  id="username">
+
+        <label class="update-form" for="email">Email Address</label>
+        <input class="input" type="email" name="email" id="email">
+
+        <label class="update-form" for="address">Address</label>
+        <input class="input" type="text" name="address" id="address">
+
+<!--        <label for="date_of_birth">Date of Birth</label>-->
+<!--        <input type="date" name="date_of_birth" id="date_of_birth">-->
+
+        <label class="update-form" for="avatar">Profile:</label>
+        <input class="file-input" type="file" name="avatar" id="avatar">
+
+    </div>
+        <button type="submit" class="btn">Update Profile</button>
+    </form>
+</div>
+
+{% endblock content%}

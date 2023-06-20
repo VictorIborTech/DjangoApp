@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<section class="home">
+    <div class="home-text">
+        <h1 class="text">Todo</h1>
+        <p class="sub-text">Todo helps you more focus either work or play</p>
+        <button class="todo-btn"><a class="home-link"  href="{% url 'register'%}">Get Start</a></button>
+    </div>
+    <img class="home-img" src="{% static 'images/todopics.jpg'%}">
+</section>
+
+{% endblock content%}

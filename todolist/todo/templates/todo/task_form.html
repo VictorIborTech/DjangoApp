@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div>
+    <form method="post" class="myform">
+        {% csrf_token%}
+        <h2>
+            {% if task %}
+                Update
+            {% else%}
+                Create
+            {% endif %}
+            Task
+        </h2>
+        {{ form.as_p }}
+<!--        {% for fields in form %}-->
+<!--            {% if fields.name == 'completed' %}-->
+<!--                <p>-->
+<!--                    {{ fields.label_tag }}-->
+<!--                    {{ fields }}-->
+<!--                </p>-->
+<!--                {% if fields.errors %}-->
+<!--                    <small>{{ fields.errors|striptags }}</small>-->
+<!--                {% endif %}-->
+<!--                {% else %}-->
+<!--                    {{ fields.label_tag }}-->
+<!--                    {{ fields }}-->
+<!--                {% if fields.errors %}-->
+<!--                    <small>{{ fields.errors|striptags }}</small>-->
+<!--                {% endif %}-->
+
+<!--            {% endif %}-->
+<!--        {% endfor %}-->
+        <div class="buttons">
+            <input class="btn" type="submit" value="Save">
+            <a class="cancel" href="{% url 'tasks' %}">Cancel</a>
+        </div>
+
+    </form>
+</div>
+
+{% endblock content%}

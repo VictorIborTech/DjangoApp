@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" type="text/css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}"><i class="fas fa-home" id="home-icon"></i>Home</a></li>
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'tasks' %}"><i class="fas fa-tasks" id="task-icon"></i>Task</a></li>
+                    <li><a href="{% url 'create_task' %}"><i class="fas fa-plus" id="create-icon"></i>Create Task</a></li>
+                    <div class="session-nav">
+                        <a href="{% url 'profile'%}" title="Update my profile" class="user-tag"> Hi {{request.user | title}}</a>
+                        <a href="{% url 'logout' %}" class="session-btn">Logout</a>
+                    </div>
+                {% else %}
+                    <div class="session-nav">
+                        <a href="{% url 'register'%}" class="join-btn">Join Now</a>
+                        <a href="{% url 'login' %}" class="session-btn">Login</a>
+
+                    </div>
+                {% endif %}
+            </ul>
+        </nav>
+  </div>
+
+</header>
+<div>
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    {% block content%}
+    {% endblock%}
+</div>
+
+<footer class="footer">
+  <p>&copy; Copyright Reserved {% now "Y" %}.</p>
+
+</footer>
+</body>
+</html>

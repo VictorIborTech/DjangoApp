@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="username">Username</label>
+        <input type="text" name="username"  id="username">
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email">
+
+        <label for="avatar">Avatar:</label>
+        <input type="file" name="avatar" id="avatar">
+
+        <button type="submit">Update Profile</button>
+
+    </form>
+</div>
+
+{% endblock %}

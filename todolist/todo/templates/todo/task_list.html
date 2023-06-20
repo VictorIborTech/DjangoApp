@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="task">
+    <h2 class="task-header">My Todo List</h2>
+        {% if tasks %}
+        <ul class="list-style">
+            {% for task in tasks %}
+                <li>
+                    <div class="task-items " >
+                        <a href="{% url 'task' task.id %}" class="task-links">{{ task.title}}</a>
+                        <div class="">
+                            <a href="{% url 'delete_task' task.id %}" class="task-delete" id="delete"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{% url 'update_task' task.id %}" class="task-update"><i class="fas fa-edit"></i></a>
+
+                        </div>
+                    </div>
+
+
+                </li>
+            {% endfor %}
+        {% else %}
+            <p class="taskinfo"> 🎉 Yay, You have no pending tasks! <a href="{% url 'create_task'%}" class="link">Create Task</a></p>
+
+        </ul>
+        {% endif %}
+
+</div>
+
+
+
+{% endblock content%}
